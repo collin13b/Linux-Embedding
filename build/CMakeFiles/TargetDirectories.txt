@@ -1,0 +1,3 @@
+/home/cat/linuxAi/rk3588prj/linuxlLearning/build/CMakeFiles/rebuild_cache.dir
+/home/cat/linuxAi/rk3588prj/linuxlLearning/build/CMakeFiles/edit_cache.dir
+/home/cat/linuxAi/rk3588prj/linuxlLearning/build/CMakeFiles/prj.dir
