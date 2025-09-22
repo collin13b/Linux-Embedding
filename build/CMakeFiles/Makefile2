@@ -93,12 +93,12 @@ clean: CMakeFiles/prj.dir/clean
 CMakeFiles/prj.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prj.dir/build.make CMakeFiles/prj.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prj.dir/build.make CMakeFiles/prj.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cat/linuxAi/rk3588prj/linuxlLearning/build/CMakeFiles --progress-num=1,2,3 "Built target prj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cat/linuxAi/rk3588prj/linuxlLearning/build/CMakeFiles --progress-num=1,2,3,4 "Built target prj"
 .PHONY : CMakeFiles/prj.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/prj.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/linuxAi/rk3588prj/linuxlLearning/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/linuxAi/rk3588prj/linuxlLearning/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/prj.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/linuxAi/rk3588prj/linuxlLearning/build/CMakeFiles 0
 .PHONY : CMakeFiles/prj.dir/rule

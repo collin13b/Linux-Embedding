@@ -7,6 +7,7 @@
 #include <chrono>
 #include "threadpool.h"   
 #include "/home/cat/linuxAi/rk3588prj/linuxlLearning/SafeQueue.h"
+#include "yolov5.h"
 using namespace std;
 using namespace cv;
 struct FrameData
@@ -94,6 +95,10 @@ int main()
     auto start = std::chrono::high_resolution_clock::now();
     const string INPUT_VIDEO_PATH = "/home/cat/linuxAi/rk3588prj/linuxlLearning/video.mp4";
     const string OUTPUT_VIDEO_PATH = "/home/cat/linuxAi/rk3588prj/linuxlLearning/output.avi";
+    const char * img_path = "/home/cat/linuxAi/rk3588prj/linuxlLearning/person.jpg";
+    Mat img;
+    img = imread(img_path,IMREAD_COLOR);
+    
     VideoCapture cap(INPUT_VIDEO_PATH);
     if(!cap.isOpened())
     {
@@ -113,14 +118,17 @@ int main()
         printf("open video failed.\n");
         return -1;
     }  
-
-    thread read_thread(ReadThread,ref(cap));
-    thread process_thread(ProcessThread,ref(nup_pool));
-    thread write_thread(WriteThread,ref(writer));
+    yolov5s yolov5("/home/cat/linuxAi/rk3588prj/linuxlLearning/model/yolov5s.rknn",1);
+    yolov5.inference_image(img);
     while (1)
     {
         /* code */
     }
+    thread read_thread(ReadThread,ref(cap));
+    thread process_thread(ProcessThread,ref(nup_pool));
+    thread write_thread(WriteThread,ref(writer));
+    
+    
     
     
     

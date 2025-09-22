@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/prj.dir/main.cpp.o"
   "CMakeFiles/prj.dir/threadpool.cpp.o"
+  "CMakeFiles/prj.dir/yolov5.cpp.o"
   "prj"
   "prj.pdb"
 )

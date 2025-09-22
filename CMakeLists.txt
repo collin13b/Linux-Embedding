@@ -15,18 +15,30 @@ set(LIB_ARCH "aarch64")
 set(DEVICE_NAME "RK3588")
 
 # 设置第三方库的路径
+set(3RDPARTY ${CMAKE_CURRENT_SOURCE_DIR}/3rdparty)
+set(RKNN_API_PATH ${3RDPARTY}/librknn_api)
+set(RKNN_INCLUDE_DIRS ${RKNN_API_PATH}/include)
+set(RKNN_LIB_DIRS ${RKNN_API_PATH}/${LIB_ARCH}/librknnrt.so)
 
+set(RGA_PATH ${3RDPARTY}/rga/${DEVICE_NAME})
+set(RGA_INCLUDE_DIRS ${RGA_PATH}/include)
+set(RGA_LIB_DIRS ${RGA_PATH}/lib/Linux/${LIB_ARCH}/librga.so)
 # 这使得源文件可以正确包含 OpenCV 的头文件。
 include_directories(
     ${OpenCV_INCLUDE_DIRS}
+    ${RKNN_INCLUDE_DIRS}
+    ${RGA_INCLUDE_DIRS}
     
 )
 add_executable(prj 
                main.cpp
                threadpool.cpp
+               yolov5.cpp
 )
 # 将 OpenCV 的库与目标可执行文件 cv 链接，确保在程序运行时能够调用 OpenCV 函数。
 target_link_libraries(prj 
                         ${OpenCV_LIBS}
+                        ${RKNN_LIB_DIRS}
+                        ${RGA_LIB_DIRS}
                         pthread
 )           

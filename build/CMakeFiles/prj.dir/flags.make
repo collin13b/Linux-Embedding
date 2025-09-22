@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /usr/include/opencv4
+CXX_INCLUDES = -I/home/cat/linuxAi/rk3588prj/linuxlLearning/3rdparty/librknn_api/include -I/home/cat/linuxAi/rk3588prj/linuxlLearning/3rdparty/rga/RK3588/include -isystem /usr/include/opencv4
 
 CXX_FLAGS = -std=gnu++14
 

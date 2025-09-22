@@ -196,6 +196,33 @@ threadpool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prj.dir/build.make CMakeFiles/prj.dir/threadpool.cpp.s
 .PHONY : threadpool.cpp.s
 
+yolov5.o: yolov5.cpp.o
+
+.PHONY : yolov5.o
+
+# target to build an object file
+yolov5.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prj.dir/build.make CMakeFiles/prj.dir/yolov5.cpp.o
+.PHONY : yolov5.cpp.o
+
+yolov5.i: yolov5.cpp.i
+
+.PHONY : yolov5.i
+
+# target to preprocess a source file
+yolov5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prj.dir/build.make CMakeFiles/prj.dir/yolov5.cpp.i
+.PHONY : yolov5.cpp.i
+
+yolov5.s: yolov5.cpp.s
+
+.PHONY : yolov5.s
+
+# target to generate assembly for a file
+yolov5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prj.dir/build.make CMakeFiles/prj.dir/yolov5.cpp.s
+.PHONY : yolov5.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,6 +238,9 @@ help:
 	@echo "... threadpool.o"
 	@echo "... threadpool.i"
 	@echo "... threadpool.s"
+	@echo "... yolov5.o"
+	@echo "... yolov5.i"
+	@echo "... yolov5.s"
 .PHONY : help
 
 
