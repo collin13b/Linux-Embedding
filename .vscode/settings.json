@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "condition_variable": "cpp"
+        "condition_variable": "cpp",
+        "deque": "cpp",
+        "vector": "cpp"
     }
 }
